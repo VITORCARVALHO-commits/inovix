@@ -16,7 +16,8 @@ const HeroSection = () => (
         transition={{ duration: 0.8, delay: 0.4 }}
         className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-primary-foreground"
       >
-        Núcleo da Inovação Digital
+        INOVIX<br />
+        Núcleo da <span className="text-accent">Inovação Digital</span>
       </motion.h1>
 
       <motion.p
