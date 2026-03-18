@@ -1,39 +1,34 @@
 import { motion } from "framer-motion";
-import plataformaLogo from "@/assets/plataforma-logo.jpg";
-import hawkcloudLogo from "@/assets/hawkcloud-logo.png";
-import readingLogo from "@/assets/reading-platform-logo.jpg";
-import devProjectsLogo from "@/assets/dev-projects-logo.png";
-import inovixLogoNavy from "@/assets/inovix-logo-navy.png";
 
 const projects = [
   {
     name: "Plataforma",
     desc: "Plataforma de desenvolvimento de aplicativos mobile onde novos apps são apresentados e promovidos. Funciona como um hub de descoberta de aplicações.",
-    logo: plataformaLogo,
+    logo: "/assets/plataforma.JPG",
     type: "Parceiro",
   },
   {
     name: "HawkCloud",
     desc: "Serviço de hospedagem web e infraestrutura SaaS. Fornece soluções de hospedagem para sites, aplicações e plataformas digitais.",
-    logo: hawkcloudLogo,
+    logo: "/assets/hawkcloud.jpg",
     type: "Parceiro",
   },
   {
     name: "Projetos de Desenvolvimento",
     desc: "Projetos experimentais e internos desenvolvidos pela INOVIX, incluindo protótipos de software e ferramentas digitais.",
-    logo: devProjectsLogo,
+    logo: "/assets/inovix.JPG",
     type: "Projeto",
   },
   {
     name: "Refúgio Digital",
     desc: "Plataforma digital de leitura focada em conhecimento e experiências de aprendizado.",
-    logo: readingLogo,
+    logo: "/assets/refugio de livros.jpg",
     type: "Projeto",
   },
   {
     name: "Rede de Ensino INOVIX",
     desc: "Projeto em andamento: Uma rede de ensino de programação diferenciada, conectada ao ecossistema INOVIX, focada em inovação, prática e colaboração.",
-    logo: inovixLogoNavy,
+    logo: "/assets/inovix.JPG",
     type: "Projeto (em andamento)",
   },
 ];
