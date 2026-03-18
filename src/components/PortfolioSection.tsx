@@ -1,10 +1,17 @@
 import { motion } from "framer-motion";
-import portfolioFinance from "@/assets/portfolio-finance.jpg";
+import portfolioFinance1 from "@/assets/portfolio-finance-1.jpg";
+import portfolioFinance2 from "@/assets/portfolio-finance-2.png";
+import portfolioFinance3 from "@/assets/portfolio-finance-3.png";
 import portfolioReading from "@/assets/portfolio-reading.jpg";
 import { ExternalLink } from "lucide-react";
 
 const portfolioItems = [
-  { name: "App Financeiro", category: "Fintech · Mobile", image: portfolioFinance, desc: "Aplicativo de controle financeiro com painel de lucros, despesas e estimativas fiscais." },
+  {
+    name: "App Financeiro",
+    category: "Fintech · Mobile",
+    images: [portfolioFinance1, portfolioFinance2, portfolioFinance3],
+    desc: "Aplicativo de controle financeiro com painel de lucros, despesas e estimativas fiscais."
+  },
   { name: "Refúgio Digital", category: "EdTech · Plataforma Web", image: portfolioReading, desc: "Plataforma digital de leitura com biblioteca, coleções e recomendações." },
 ];
 
@@ -32,7 +39,16 @@ const PortfolioSection = () => (
             className="glass-card overflow-hidden group hover:shadow-lg transition-all duration-300"
           >
             <div className="aspect-video bg-secondary flex items-center justify-center overflow-hidden">
-              <img src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              {item.images ? (
+                <div className="w-full h-full flex">
+                  {/* Carousel simples: mostra todas as imagens lado a lado, pode ser melhorado com slider */}
+                  {item.images.map((img, idx) => (
+                    <img key={idx} src={img} alt={item.name + ' ' + (idx + 1)} className="w-full h-full object-cover" style={{ maxWidth: '33%' }} />
+                  ))}
+                </div>
+              ) : (
+                <img src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              )}
             </div>
             <div className="p-6">
               <div className="flex items-center justify-between mb-2">
