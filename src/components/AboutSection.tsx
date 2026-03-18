@@ -9,7 +9,7 @@ const features = [
 
 const AboutSection = () => (
   <section id="sobre" className="section-padding bg-background">
-    <div className="max-w-6xl mx-auto">
+    <div className="w-full mx-auto">
       <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="text-center mb-16">
         <span className="text-accent text-sm font-medium uppercase tracking-widest">Sobre Nós</span>
         <h2 className="font-display text-4xl md:text-5xl font-bold mt-3 mb-6 text-primary">

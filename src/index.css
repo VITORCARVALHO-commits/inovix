@@ -64,6 +64,8 @@
   }
   body {
     @apply bg-background text-foreground antialiased;
+    width: 100vw;
+    overflow-x: hidden;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Space Grotesk', sans-serif;
@@ -94,12 +96,6 @@
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: hsl(var(--background));
-}
-::-webkit-scrollbar-thumb {
-  background: hsl(var(--muted));
-  border-radius: 3px;
+  width: 0px;
+  background: transparent;
 }

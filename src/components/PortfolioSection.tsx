@@ -8,13 +8,11 @@ import { ExternalLink } from "lucide-react";
 const portfolioItems = [
   { name: "App Financeiro", category: "Fintech · Mobile", image: portfolioFinance, desc: "Aplicativo de controle financeiro com painel de lucros, despesas e estimativas fiscais." },
   { name: "Refúgio Digital", category: "EdTech · Plataforma Web", image: portfolioReading, desc: "Plataforma digital de leitura com biblioteca, coleções e recomendações." },
-  { name: "Plataforma", category: "Mobile · Discovery Hub", image: plataformaLogo, desc: "Hub de descoberta de aplicativos mobile desenvolvidos no ecossistema." },
-  { name: "HawkCloud", category: "Cloud · Infraestrutura", image: hawkcloudLogo, desc: "Serviço de hospedagem e infraestrutura SaaS para plataformas digitais." },
 ];
 
 const PortfolioSection = () => (
   <section id="portfolio" className="section-padding bg-secondary/50">
-    <div className="max-w-6xl mx-auto">
+    <div className="w-full mx-auto">
       <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="text-center mb-16">
         <span className="text-accent text-sm font-medium uppercase tracking-widest">Portfólio</span>
         <h2 className="font-display text-4xl md:text-5xl font-bold mt-3 mb-6 text-primary">

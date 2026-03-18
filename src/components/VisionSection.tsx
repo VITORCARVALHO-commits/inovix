@@ -4,7 +4,7 @@ import { Rocket } from "lucide-react";
 const VisionSection = () => (
   <section id="visao" className="section-padding navy-bg relative overflow-hidden">
     <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-accent/5" />
-    <div className="max-w-4xl mx-auto relative z-10 text-center">
+    <div className="w-full mx-auto relative z-10 text-center">
       <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
         <Rocket className="text-accent mx-auto mb-6" size={40} />
         <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-primary-foreground">

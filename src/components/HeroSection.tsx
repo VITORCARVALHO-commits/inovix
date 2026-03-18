@@ -6,11 +6,11 @@ import inovixLogoNavy from "@/assets/inovix-logo-navy.png";
 const HeroSection = () => (
   <section className="relative min-h-screen flex items-center justify-center overflow-hidden navy-bg">
     <NetworkBackground />
-    <div className="absolute inset-0 bg-gradient-to-b from-navy/50 via-transparent to-navy/80" />
+    <div className="absolute inset-0 bg-gradient-to-b from-navy/95 via-navy/100 to-navy/100" />
 
     <div className="relative z-10 max-w-4xl mx-auto text-center px-6">
       <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}>
-        <img src={inovixLogoNavy} alt="INOVIX" className="h-20 md:h-28 mx-auto mb-8 object-contain" />
+        {/* Logo removida */}
       </motion.div>
 
       <motion.h1
@@ -47,9 +47,6 @@ const HeroSection = () => (
         </a>
       </motion.div>
 
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1.5 }} className="absolute bottom-10 left-1/2 -translate-x-1/2">
-        <ArrowDown className="text-primary-foreground/40 animate-bounce" size={24} />
-      </motion.div>
     </div>
   </section>
 );

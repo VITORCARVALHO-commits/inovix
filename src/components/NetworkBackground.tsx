@@ -11,7 +11,7 @@ const NetworkBackground = () => {
 
     let animationId: number;
     const particles: { x: number; y: number; vx: number; vy: number; size: number }[] = [];
-    const particleCount = 50;
+    const particleCount = 80;
 
     const resize = () => {
       canvas.width = canvas.offsetWidth * window.devicePixelRatio;
@@ -43,7 +43,7 @@ const NetworkBackground = () => {
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(45, 180, 170, 0.5)";
+        ctx.fillStyle = "rgba(45, 180, 170, 0.8)";
         ctx.fill();
       });
 
@@ -57,7 +57,8 @@ const NetworkBackground = () => {
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
             ctx.strokeStyle = `rgba(45, 180, 170, ${0.12 * (1 - dist / 140)})`;
-            ctx.lineWidth = 0.5;
+            ctx.strokeStyle = `rgba(45, 180, 170, ${0.25 * (1 - dist / 140)})`;
+            ctx.lineWidth = 1.2;
             ctx.stroke();
           }
         }
