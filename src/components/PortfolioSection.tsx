@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import portfolioFinance from "@/assets/portfolio-finance.jpg";
 import portfolioReading from "@/assets/portfolio-reading.jpg";
-import plataformaLogo from "@/assets/plataforma-logo.jpg";
-import hawkcloudLogo from "@/assets/hawkcloud-logo.png";
 import { ExternalLink } from "lucide-react";
 
 const portfolioItems = [
