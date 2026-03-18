@@ -10,7 +10,7 @@ const HeroSection = () => (
 
     <div className="relative z-10 max-w-4xl mx-auto text-center px-6">
       <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}>
-        {/* Logo removida */}
+        <img src={inovixLogoNavy} alt="INOVIX" className="h-20 md:h-28 mx-auto mb-8 object-contain" />
       </motion.div>
 
       <motion.h1
@@ -19,9 +19,7 @@ const HeroSection = () => (
         transition={{ duration: 0.8, delay: 0.4 }}
         className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-primary-foreground"
       >
-        O Núcleo da
-        <br />
-        <span className="text-gradient">Inovação Digital</span>
+        Rede de Ensino INOVIX
       </motion.h1>
 
       <motion.p
