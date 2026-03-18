@@ -14,18 +14,18 @@ const HeroSection = () => (
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
-        className="font-display text-5xl md:text-7xl font-extrabold leading-tight mb-8 text-white drop-shadow-lg"
+        className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-primary-foreground"
       >
-        INOVIX
+        Núcleo da Inovação Digital
       </motion.h1>
 
       <motion.p
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
-        className="text-xl md:text-2xl text-white/80 max-w-2xl mx-auto mb-12 drop-shadow"
+        className="text-lg md:text-xl text-primary-foreground/70 max-w-2xl mx-auto mb-10"
       >
-        Ecossistema de Inovação e Tecnologia para Educação, Startups e Negócios Digitais.
+        Construindo plataformas, aplicações e ecossistemas digitais. A INOVIX é o hub central que impulsiona múltiplos projetos de tecnologia.
       </motion.p>
 
       <motion.div
