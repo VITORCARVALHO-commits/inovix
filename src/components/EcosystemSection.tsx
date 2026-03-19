@@ -61,9 +61,9 @@ const EcosystemSection = () => (
             transition={{ duration: 0.5, delay: i * 0.1 }}
             className="bg-navy-light/50 border border-primary-foreground/10 rounded-xl p-4 sm:p-5 md:p-6 flex items-start gap-3 sm:gap-4 md:gap-5 hover:border-accent/30 transition-all duration-300 group"
           >
-            {/* Logo maior e destacada para parcerias */}
-            <div className={p.type === "Parceiro" ? "w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 border-2 border-accent rounded-xl flex-shrink-0 overflow-hidden bg-white" : "w-5 h-5 sm:w-7 sm:h-7 md:w-10 md:h-10 rounded-xl flex-shrink-0 overflow-hidden"}>
-              <img src={p.logo} alt={p.name} className="w-full h-full object-contain rounded-xl" />
+            {/* Logo menor e sem fundo branco */}
+            <div className="w-7 h-7 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-xl flex-shrink-0 overflow-hidden">
+              <img src={p.logo} alt={p.name} className={p.name === "HawkCloud" ? "w-full h-full object-contain rounded-xl bg-transparent" : "w-full h-full object-contain rounded-xl"} style={{ background: 'transparent' }} />
             </div>
             <div>
               <div className="flex items-center gap-2 mb-2">

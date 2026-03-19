@@ -1,20 +1,8 @@
 
 const Footer = () => (
   <footer className="navy-bg border-t border-primary-foreground/10 py-10 px-6">
-    <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+    <div className="max-w-6xl mx-auto flex items-center justify-center">
       <span className="text-sm text-primary-foreground/50">© 2026 INOVIX. Todos os direitos reservados.</span>
-      <div className="flex gap-6">
-        {[
-          { label: "Sobre", href: "#sobre" },
-          { label: "Ecossistema", href: "#ecossistema" },
-          { label: "Serviços", href: "#servicos" },
-          { label: "Contato", href: "#contato" },
-        ].map((l) => (
-          <a key={l.label} href={l.href} className="text-sm text-primary-foreground/40 hover:text-primary-foreground transition-colors">
-            {l.label}
-          </a>
-        ))}
-      </div>
     </div>
   </footer>
 );

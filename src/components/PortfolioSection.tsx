@@ -6,6 +6,33 @@ import portfolioReading from "@/assets/portfolio-reading.jpg";
 import inovixLogo from "@/assets/inovix.jpg";
 import refugioLogo from "@/assets/refugio de livros.jpg";
 import { ExternalLink } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+// Carousel vertical automático
+function VerticalAutoCarousel({ images, interval = 2500 }) {
+  const [active, setActive] = useState(0);
+  const timeoutRef = useRef();
+
+  useEffect(() => {
+    timeoutRef.current = setTimeout(() => {
+      setActive((prev) => (prev + 1) % images.length);
+    }, interval);
+    return () => clearTimeout(timeoutRef.current);
+  }, [active, images.length, interval]);
+
+  return (
+    <div className="w-full h-full flex flex-col items-center justify-center relative">
+      {images.map((img, idx) => (
+        <img
+          key={idx}
+          src={img}
+          alt={"carousel " + (idx + 1)}
+          className={`w-full h-full object-contain transition-opacity duration-700 absolute top-0 left-0 ${active === idx ? "opacity-100 z-10" : "opacity-0 z-0"}`}
+          style={{ maxHeight: '100%', maxWidth: '100%' }}
+        />
+      ))}
+    </div>
+  );
+}
 
 const portfolioItems = [
   {
@@ -48,25 +75,16 @@ const PortfolioSection = () => (
             className="glass-card overflow-hidden group hover:shadow-lg transition-all duration-300"
           >
             <div className="aspect-video bg-secondary flex items-center justify-center overflow-hidden">
-              {/* Logo do projeto à esquerda */}
-              <img src={item.logo} alt={item.name + ' logo'} className="h-16 w-16 object-contain mr-4" style={{ background: '#fff', borderRadius: '8px' }} />
-              {/* Imagens do projeto */}
+              {/* Imagens do projeto com efeito de rolagem automática vertical */}
               {item.images ? (
-                <div className="w-full h-full flex">
-                  {item.images.map((img, idx) => (
-                    <img key={idx} src={img} alt={item.name + ' ' + (idx + 1)} className="w-full h-full object-cover" style={{ maxWidth: '33%' }} />
-                  ))}
-                </div>
+                <VerticalAutoCarousel images={item.images} />
               ) : (
                 <img src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               )}
             </div>
             <div className="p-6">
               <div className="flex items-center justify-between mb-2">
-                <div className="flex items-center gap-2">
-                  <img src={item.logo} alt={item.name + ' logo'} className="h-8 w-8 object-contain" style={{ background: '#fff', borderRadius: '4px' }} />
-                  <h3 className="font-display font-semibold text-lg text-primary">{item.name}</h3>
-                </div>
+                <h3 className="font-display font-semibold text-lg text-primary">{item.name}</h3>
                 <ExternalLink className="text-muted-foreground group-hover:text-accent transition-colors" size={16} />
               </div>
               <span className="text-xs text-accent font-medium">{item.category}</span>
