@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import NetworkBackground from "./NetworkBackground";
-import inovixLogoNavy from "@/assets/inovix-logo-navy.png";
+import inovixLogoNavy from "@/assets/inovix.jpg";
 
 const HeroSection = () => (
   <section className="relative min-h-screen flex items-center justify-center overflow-hidden navy-bg">

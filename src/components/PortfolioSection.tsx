@@ -3,16 +3,25 @@ import portfolioFinance1 from "@/assets/portfolio-finance-1.jpg";
 import portfolioFinance2 from "@/assets/portfolio-finance-2.png";
 import portfolioFinance3 from "@/assets/portfolio-finance-3.png";
 import portfolioReading from "@/assets/portfolio-reading.jpg";
+import inovixLogo from "@/assets/inovix.jpg";
+import refugioLogo from "@/assets/refugio de livros.jpg";
 import { ExternalLink } from "lucide-react";
 
 const portfolioItems = [
   {
     name: "App Financeiro",
     category: "Fintech · Mobile",
+    logo: inovixLogo,
     images: [portfolioFinance1, portfolioFinance2, portfolioFinance3],
     desc: "Aplicativo de controle financeiro com painel de lucros, despesas e estimativas fiscais."
   },
-  { name: "Refúgio Digital", category: "EdTech · Plataforma Web", image: portfolioReading, desc: "Plataforma digital de leitura com biblioteca, coleções e recomendações." },
+  {
+    name: "Refúgio Digital",
+    category: "EdTech · Plataforma Web",
+    logo: refugioLogo,
+    image: portfolioReading,
+    desc: "Plataforma digital de leitura com biblioteca, coleções e recomendações."
+  },
 ];
 
 const PortfolioSection = () => (
@@ -39,9 +48,11 @@ const PortfolioSection = () => (
             className="glass-card overflow-hidden group hover:shadow-lg transition-all duration-300"
           >
             <div className="aspect-video bg-secondary flex items-center justify-center overflow-hidden">
+              {/* Logo do projeto à esquerda */}
+              <img src={item.logo} alt={item.name + ' logo'} className="h-16 w-16 object-contain mr-4" style={{ background: '#fff', borderRadius: '8px' }} />
+              {/* Imagens do projeto */}
               {item.images ? (
                 <div className="w-full h-full flex">
-                  {/* Carousel simples: mostra todas as imagens lado a lado, pode ser melhorado com slider */}
                   {item.images.map((img, idx) => (
                     <img key={idx} src={img} alt={item.name + ' ' + (idx + 1)} className="w-full h-full object-cover" style={{ maxWidth: '33%' }} />
                   ))}
@@ -52,7 +63,10 @@ const PortfolioSection = () => (
             </div>
             <div className="p-6">
               <div className="flex items-center justify-between mb-2">
-                <h3 className="font-display font-semibold text-lg text-primary">{item.name}</h3>
+                <div className="flex items-center gap-2">
+                  <img src={item.logo} alt={item.name + ' logo'} className="h-8 w-8 object-contain" style={{ background: '#fff', borderRadius: '4px' }} />
+                  <h3 className="font-display font-semibold text-lg text-primary">{item.name}</h3>
+                </div>
                 <ExternalLink className="text-muted-foreground group-hover:text-accent transition-colors" size={16} />
               </div>
               <span className="text-xs text-accent font-medium">{item.category}</span>
